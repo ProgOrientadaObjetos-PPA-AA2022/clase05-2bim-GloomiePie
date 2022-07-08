@@ -100,20 +100,16 @@ public class Principal2 {
                 opcion2 = sc.nextInt();
 
             }
-        } else {
-            TiposTransporte tipos = new TiposTransporte();
-            tipos.establecerTransportes(lista);
-            tipos.establecerPromedioTarifas();
-
-            System.out.printf("Promedio de Tarifas: %.2f\n",
-                    tipos.obtenerPromedioTarifas());
         }
 
         TiposTransporte tipos = new TiposTransporte();
         tipos.establecerTransportes(lista);
         tipos.establecerPromedioTarifas();
-
-        System.out.printf("Promedio de Tarifas: %.2f\n",
+        
+        for (int i = 0; i < lista.size(); i++) {
+            System.out.printf("%s", lista.get(i));
+        }
+        System.out.printf("Promedio de Tarifas: $%.2f\n",
                 tipos.obtenerPromedioTarifas());
 
     }
